@@ -26,7 +26,11 @@ while (! feof($data)) {
 		
 			$permision=true;
 		# code...
-			//echo "reussi1";
+		
+		// affichage des connectés
+			$PresentList = fopen('presentList.txt', 'a+');
+			//fputs($PresentList, '\n');
+			fputs($PresentList, $login."\n");
 		}
 	}
 
@@ -45,15 +49,9 @@ else {
 }
 
 fclose($data);
+fclose($PresentList);
 
-/*
-if ($login == "root" AND $pass == "toor") {
-	echo "bienvenue";
-	header('Location: page2.php');	# code...
-}
-else {
-	header('Location: index.php');
-}*/
+
 ?>
 
 
