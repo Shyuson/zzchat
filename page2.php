@@ -14,6 +14,13 @@
 
 
     <body>
+    	<?php
+	        $user = $_GET['user'];
+	        echo "Bonjour  ";
+			echo $user;
+		?>
+
+
     	<nav>
 		    <p>Les ZZ present sur le chat</p>
 		    <?php
@@ -33,6 +40,18 @@
 		</section>
 
 
+
+
+		<section>
+			<form method="POST" action="traitement.php">
+
+		        Pseudo : <input type="text" name="pseudo" id="pseudo" /><br />
+
+		        Message : <textarea name="message" id="message"></textarea><br />
+
+		        <input type="submit" name="submit" value="Envoyez votre message !" id="envoi" />
+		    </form>
+		</section>
     </body>
 
 </html>

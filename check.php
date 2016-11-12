@@ -42,7 +42,7 @@ while (! feof($data)) {
 
 
 if ($permision) {
-	header('Location: page2.php');# code...
+	header('Location: page2.php?user="$pseudo"');# code...
 }
 else {
 	header('Location: index.php');
