@@ -31,6 +31,7 @@ while (! feof($data)) {
 			$PresentList = fopen('presentList.txt', 'a+');
 			//fputs($PresentList, '\n');
 			fputs($PresentList, $login."\n");
+
 		}
 	}
 
@@ -40,9 +41,8 @@ while (! feof($data)) {
 
 
 
-
 if ($permision) {
-	header('Location: page2.php?user="$pseudo"');# code...
+	header('Location: page2.php?user=+$pseudo');# code...
 }
 else {
 	header('Location: index.php');

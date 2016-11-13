@@ -2,11 +2,17 @@
 <html>
 <!on fait une commentaire la>
 <head>
+	<meta charset="utf-8" />
 	<title>My very fist page</title>
 	<link rel="stylesheet" type="text/css" href="./bootstrap.min.css">
 </head>
 
 <body>
+	<div id="resultat">
+
+        <!-- Nous allons afficher un retour en jQuery au visiteur -->
+
+    </div>
 		<div class="container">
 			<div class="row main">
 				<div class="panel-heading">
@@ -16,7 +22,7 @@
 	               	</div>
 	            </div> 
 				<div class="main-login main-center">
-					<form class="form-horizontal" action="check.php" method="post" >
+					<form class="form-horizontal">
 						
 						<div class="form-group">
 							<label for="name" class="cols-sm-2 control-label">Login</label>
@@ -42,13 +48,17 @@
 
 						</div>
 						<div class="login-register">
-				            <input type="submit" value="Login">
+				            <input type="submit" id="submit" value="Login">
 				         </div>
 					</form>
 				</div>
 			</div>
 		</div>
 
-		<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+		<script type="text/javascript" 
+		src="assets/js/bootstrap.js"
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"
+		src= "./Sendata.js" ></script>
+
 	</body>
 </html>
