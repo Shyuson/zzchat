@@ -15,8 +15,7 @@ $('#envoyer').click(function() {
         function afficheConversation(){
           $('#conversation').load('ac.htm');
         }
-        alert("ca marche");
-        setInterval(afficheConversation, 4000);
+        setInterval(afficheConversation, 2000);
         function afficheConversation(){
           $('#conversation').load('ac.htm');
         }

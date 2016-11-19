@@ -1,28 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Insertion, copie et suppression de données</title>
-  </head>
-  <body>
+<!on fait une commentaire la>
+<head>
+	<meta charset="utf-8" />
+	<title>My very fist page</title>
+	<link rel="stylesheet" type="text/css" href="./librairie/bootstrap.min.css">
+</head>
 
-   <fieldset>
+<body>
+		<div class="container">
+			<div class="row main">
+				<div class="panel-heading">
+	               <div class="panel-title text-center">
+	               		<h1 class="title">ZZchat</h1>
+	               		<hr />
+	               	</div>
+	            </div> 
+				<div class="main-login main-center">
+					<form class="form-horizontal" action="./function/check.php" method="post">
+						
+						<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Login</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<input type="text" class="form-control" name="pseudo" id="pseudo"  placeholder="Enter your Pseudo"/>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">Password</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+								</div>
+							</div>
+						</div>
+						<div class="form-group ">
+							<!<button type="button" class="btn btn-primary btn-lg btn-block login-button"> 
+							<a href="inscription.php">Register</a> 
+							<!</button>
 
-     <legend>Un chat en jQuery</legend>
 
-      <div id="conversation"></div><br />
+						</div>
+						<div class="login-register">
+				            <input type="submit" id="submit" value="Login"> Login</button> 
+				         </div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="./librairie/jquery-3.1.1.js"> </script>
+		<!script src="./script/SendData.js" >
 
-      <form action="#" method="post">
-
-        <input type="text" id="nom" value="pseudo" size="6">
-
-        <input type="text" id="message" size="27">
-
-        <button type="button" id="envoyer" title="Envoyer">Envoyer</button>
-      </form>
-    </fieldset>
-
-    <script src="../jquery-3.1.1.js"></script>
-    <script src="test.js"></script>
-  </body>
+	</body>
 </html>
