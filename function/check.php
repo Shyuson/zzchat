@@ -1,5 +1,5 @@
 <?php 
-
+include("online.php");
 $login = $_POST['pseudo'];
 $pass = $_POST['password'];
 $permision = false;
@@ -20,12 +20,20 @@ while (! feof($data)) {
 		//echo "reussi2";
 		if ($pseudo == $login) {
 			# code...
-			$permision=true;
-		# code...
-		// affichage des connectés
-			$PresentList = fopen(__DIR__.'/../data/online.txt', 'a+');
-			//fputs($PresentList, '\n');
-			fputs($PresentList, $login."\n");
+			if(! dejaOnline($login)){
+				$permision=true;
+			# code...
+			// affichage des connectés
+				$PresentList = fopen(__DIR__.'/../data/online.txt', 'a+');
+				//fputs($PresentList, '\n');
+				fputs($PresentList, $login.'<br>'."\n");
+
+				session_start();
+
+				$_SESSION['prenom'] = $login ;
+
+				var_dump($_SESSION['prenom']);
+			}
 
 		}
 	}
@@ -35,17 +43,17 @@ while (! feof($data)) {
 
 
 
+fclose($data);
+fclose($PresentList);
+
 
 if ($permision) {
-	header("Location: ../chat.html");# code...
+	header("Location: ../pagechat.php");# code...
 }
 else {
 	header("Location: ../error.html");
 }
-/*
-fclose($data);
-fclose($PresentList);
-*/
+
 
 ?>
 
