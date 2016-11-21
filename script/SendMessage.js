@@ -1,3 +1,11 @@
+function afficheConversation(){
+          $('#conversation').load('data/ac.txt');
+          $('#onlineUser').load('data/online.txt');
+        }
+
+setInterval(afficheConversation, 2000);
+
+
 $('#envoyer').click(function() {
 
         var nom = $('#nom').val();
@@ -11,13 +19,5 @@ $('#envoyer').click(function() {
             'message': message
 
         });
-
-
-        function afficheConversation(){
-          $('#conversation').load('data/ac.txt');
-          $('#onlineUser').load('data/online.txt');
-        }
-
-        setInterval(afficheConversation, 2000);
         
       });

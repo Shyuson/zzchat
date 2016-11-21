@@ -29,6 +29,7 @@
     </fieldset>
 
     <script src="./librairie/jquery-3.1.1.js"></script>
+    <script src="./script/SendData.js" > </script>
     <script src="./script/SendMessage.js"></script>
   </body>
 </html>

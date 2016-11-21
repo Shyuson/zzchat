@@ -8,7 +8,7 @@ function dejaOnline( $pseudo ){
 	while (! feof($fichier)) {
 		# code...
 		$user = fgets($fichier);
-		$user = substr( $user , 0, -1);
+		$user = substr( $user , 0, -5);
 		if ($user == $pseudo) {
 			$resultat=true;
 			# code...
