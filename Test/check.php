@@ -1,4 +1,6 @@
 <?php 
+include("online.php");
+
 $login = $_POST['pseudo'];
 $pass = $_POST['password'];
 $permision = false;
@@ -28,7 +30,7 @@ while (! feof($data)) {
 		# code...
 		
 		// affichage des connectés
-			$PresentList = fopen('presentList.txt', 'a+');
+			$PresentList = fopen('online.txt', 'a+');
 			//fputs($PresentList, '\n');
 			fputs($PresentList, $login."\n");
 

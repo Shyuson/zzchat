@@ -12,9 +12,12 @@ $('#envoyer').click(function() {
 
         });
 
+
         function afficheConversation(){
           $('#conversation').load('data/ac.txt');
+          $('#onlineUser').load('data/online.txt');
         }
+
         setInterval(afficheConversation, 2000);
         
       });
