@@ -3,7 +3,7 @@ function afficheConversation(){
           $('#onlineUser').load('data/online.txt');
         }
 
-setInterval(afficheConversation, 2000);
+setInterval(afficheConversation, 1000);
 
 
 $('#envoyer').click(function() {
@@ -19,5 +19,7 @@ $('#envoyer').click(function() {
             'message': message
 
         });
+
+        $('#message').val('');
         
       });
