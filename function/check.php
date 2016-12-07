@@ -32,7 +32,6 @@ while (! feof($data)) {
 
 				$_SESSION['prenom'] = $login ;
 
-				var_dump($_SESSION['prenom']);
 			}
 
 		}

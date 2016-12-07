@@ -1,11 +1,8 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Insertion, copie et suppression de données</title>
+    <title>zzchat</title>
   </head>
   <body>
  
@@ -16,7 +13,7 @@ session_start();
 
     </div>
     <br>
-     <legend>Un chat en jQuery</legend>
+     <legend>ZZchat</legend>
 
       <div id="conversation"></div><br />
 
@@ -32,6 +29,7 @@ session_start();
     </fieldset>
 
     <script src="./librairie/jquery-3.1.1.js"></script>
+    <script src="./script/SendData.js" > </script>
     <script src="./script/SendMessage.js"></script>
   </body>
 </html>
