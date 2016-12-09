@@ -6,7 +6,10 @@
   </head>
   <body>
  
-  <?php //    session_start();         florent a garder décommenter ce messsage si ca marche pas sur ton PC?>
+  <?php  session_start();     //    florent a garder décommenter ce messsage si ca marche pas sur ton PC?>
+
+  <a id="FR" href="fr.php"> <button type="button"><?php echo "FR" ?></button> </a>
+  <a id="ENG" href="./function/changeENG.php"> <button type="button">ENG</button> </a>
    <fieldset>
    <p>Les utilisateur connecté sont :</p> <br>
     <div id=onlineUser>
