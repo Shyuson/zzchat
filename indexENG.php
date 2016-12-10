@@ -8,7 +8,7 @@ $_SESSION['langue']="eng";
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title>My very fist page</title>
+	<title>Welcome to ZZchat</title>
 	<link rel="stylesheet" type="text/css" href="./librairie/bootstrap.min.css">
 </head>
 
@@ -19,7 +19,7 @@ $_SESSION['langue']="eng";
 			<div class="row main">
 				<div class="panel-heading">
 	               <div class="panel-title text-center">
-	               		<h1 class="title">ZZchat</h1>
+	               		<h1 class="title">Welcome to ZZchat</h1>
 	               		<hr />
 	               	</div>
 	            </div> 
@@ -30,7 +30,7 @@ $_SESSION['langue']="eng";
 							<label for="name" class="cols-sm-2 control-label">Login</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
-									<input type="text" class="form-control" name="pseudo" id="pseudo"  placeholder="Enter your Pseudo"/>
+									<input type="text" class="form-control" name="pseudo" id="pseudo"  placeholder="Enter your login"/>
 								</div>
 							</div>
 						</div>

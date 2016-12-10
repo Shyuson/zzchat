@@ -1,15 +1,16 @@
 <?php 
 include("online.php");
-$login = $_POST['pseudo'];
-$pass = $_POST['password'];
-$permision = false;
+$login = $_POST['pseudo'];   //On récupère ce que l'utilisateur a écrit dans la barre "pseudo"
+$pass = $_POST['password'];  //On récupère ce que l'utilisateur a écrit dans la barre "passmord"
+$permision = false;          //Par défaut, on n'autorise pas l'accès au site de chat
+$id_error = 0;
 
 
-$data = fopen(__DIR__.'/../data/data.txt', 'r+');
+
+$data = fopen(__DIR__.'/../data/data.txt', 'r+'); //Ouverture du fichier "data.txt", où sont stochés les logins et les mots de passe
 
 
 while (! feof($data)) {
-	# code...
 	$pseudo = fgets($data);
 	$mdp = fgets($data);
 
@@ -17,15 +18,10 @@ while (! feof($data)) {
 	$mdp = substr( $mdp , 0, -1);
 
 	if ($pass == $mdp) {
-		//echo "reussi2";
 		if ($pseudo == $login) {
-			# code...
 			if(! dejaOnline($login)){
 				$permision=true;
-			# code...
-			// affichage des connectés
 				$PresentList = fopen(__DIR__.'/../data/online.txt', 'a+');
-				//fputs($PresentList, '\n');
 				fputs($PresentList, $login.'<br>'."\n");
 
 				session_start();
@@ -48,7 +44,7 @@ fclose($PresentList);
 
 if ($permision) {
 	if($_SESSION['langue']=="fr"){
-		header("Location: ../pagechat.php");# code...
+		header("Location: ../pagechat.php");
 	}
 	else{
 		header("Location: ../pagechatENG.php");
