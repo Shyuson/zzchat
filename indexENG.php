@@ -1,6 +1,11 @@
+<?php
+session_start();
+$_SESSION['langue']="eng";
+?>
+
+
 <!DOCTYPE html>
 <html>
-<!on fait une commentaire la>
 <head>
 	<meta charset="utf-8" />
 	<title>My very fist page</title>
@@ -8,6 +13,8 @@
 </head>
 
 <body>
+	<a id="FR" href="./function/changeFRindex.php"> <button type="button">FR</button> </a>
+  	<a id="ENG" href="./function/changeENGindex.php"> <button type="button">ENG</button> </a>
 		<div class="container">
 			<div class="row main">
 				<div class="panel-heading">
@@ -37,7 +44,7 @@
 						</div>
 						<div class="form-group ">
 							<!<button type="button" class="btn btn-primary btn-lg btn-block login-button"> 
-							<a href="inscription.php">Register</a> 
+							<a href="function/inscription.php">Register</a> 
 							<!</button>
 
 
