@@ -44,7 +44,7 @@ $_SESSION['langue']="fr";
 						</div>
 						<div class="form-group ">
 							<!<button type="button" class="btn btn-primary btn-lg btn-block login-button"> 
-							<a href="function/inscription.php">Inscription</a> 
+							<a href="inscription.php">Inscription</a> 
 							<!</button>
 
 

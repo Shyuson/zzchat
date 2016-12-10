@@ -10,7 +10,7 @@ var_dump($_SESSION['langue']);
     <title>zzchat</title>
   </head>
   <body>
-  <a id="FR" href="./function/changeFR.php"> <button type="button"><?php echo "FR" ?></button> </a>
+  <a id="FR" href="./function/changeFR.php"> <button type="button">FR</button> </a>
   <a id="ENG" href="./function/changeENG.php"> <button type="button">ENG</button> </a>
    <fieldset>
     <legend>Les utilisateur connecté sont :</legend>
