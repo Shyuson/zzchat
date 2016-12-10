@@ -8,7 +8,7 @@ $_SESSION['langue']="fr";
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title>My very fist page</title>
+	<title>ZZchat</title>
 	<link rel="stylesheet" type="text/css" href="./librairie/bootstrap.min.css">
 </head>
 
