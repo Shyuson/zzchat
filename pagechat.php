@@ -1,4 +1,4 @@
- <?php  session_start();     //    florent a garder décommenter ce messsage si ca marche pas sur ton PC
+ <?php  session_start();     //    décommenter ce messsage si ça ne marche pas
 var_dump($_SESSION['langue']);
  ?>
 
@@ -7,13 +7,13 @@ var_dump($_SESSION['langue']);
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>zzchat</title>
+    <title>Bienvenue sur ZZchat</title>
   </head>
   <body>
   <a id="FR" href="./function/changeFR.php"> <button type="button">FR</button> </a>
   <a id="ENG" href="./function/changeENG.php"> <button type="button">ENG</button> </a>
    <fieldset>
-    <legend>Les utilisateur connecté sont :</legend>
+    <legend>Les utilisateurs actuellement connectés sont :</legend>
     <div id=onlineUser>
 
     </div>
@@ -34,7 +34,7 @@ var_dump($_SESSION['langue']);
 
         <button type="button" id="envoyer" title="Envoyer">Envoyer</button>
       </form>
-      <a href="function/deconnexion.php">deconnexion</a> 
+      <a href="function/deconnexion.php">Déconnexion</a> 
     </fieldset>
 
 

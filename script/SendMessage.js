@@ -1,9 +1,11 @@
+setInterval(afficheConversation, 1000);
+
+
 function afficheConversation(){
           $('#conversation').load('data/ac.txt');
           $('#onlineUser').load('data/online.txt');
-        }
+}
 
-setInterval(afficheConversation, 1000);
 
 
 $('#envoyer').click(function() {
