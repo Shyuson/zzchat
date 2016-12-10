@@ -47,7 +47,12 @@ fclose($PresentList);
 
 
 if ($permision) {
-	header("Location: ../pagechat.php");# code...
+	if($_SESSION['langue']=="fr"){
+		header("Location: ../pagechat.php");# code...
+	}
+	else{
+		header("Location: ../pagechatENG.php");
+	}
 }
 else {
 	header("Location: ../error.html");

@@ -7,13 +7,13 @@ var_dump($_SESSION['langue']);
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>zzchat</title>
+    <title>zzchat in english</title>
   </head>
   <body>
   <a id="FR" href="./function/changeFR.php"> <button type="button"><?php echo "FR" ?></button> </a>
   <a id="ENG" href="./function/changeENG.php"> <button type="button">ENG</button> </a>
    <fieldset>
-    <legend>Les utilisateur connecté sont :</legend>
+    <legend>Online User are :</legend>
     <div id=onlineUser>
 
     </div>
@@ -22,7 +22,7 @@ var_dump($_SESSION['langue']);
 
   </fieldset>
   <fieldset>
-    <legend>Conversation</legend>
+    <legend>Talk</legend>
       <div id="conversation"></div><br />
       <button id='btnBold' value='Bold'>Bold</button>
       <button id='btnI' value='Italic'>Italic</button>
@@ -32,9 +32,9 @@ var_dump($_SESSION['langue']);
 
         <input type="text" id="message" size="27">
 
-        <button type="button" id="envoyer" title="Envoyer">Envoyer</button>
+        <button type="button" id="envoyer" title="Envoyer">Send</button>
       </form>
-      <a href="function/deconnexion.php">deconnexion</a> 
+      <a href="function/deconnexion.php">Log out</a> 
     </fieldset>
 
 
