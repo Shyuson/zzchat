@@ -1,4 +1,4 @@
- <?php  session_start();     //    décommenter ce messsage si ça ne marche pas
+ <?php 
 var_dump($_SESSION['langue']);
  ?>
 

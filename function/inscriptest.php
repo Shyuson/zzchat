@@ -1,11 +1,10 @@
 <?php 
-session_start();
 $login = $_POST['pseudo'];
 $pass = $_POST['password'];
-$confim = $_POST['password2']; //Inutilisé pour l'instant
+$confim = $_POST['password2']; //Unused for now
 $exist = false;     //Par défaut, on suppose que l'utilisateur n'est pas inscrit
 $problemControl = true; //Par défaut, on suppose que l'utilisateur a entré des caractères interdits
-
+//$hache = password_hash
 if (preg_match('#^[0-9a-zA-Z]{3,}$#',$login)==1){
 	
 	if (preg_match('#^[0-9a-zA-Z]{3,}$#',$pass)==1) {
@@ -20,8 +19,8 @@ if (preg_match('#^[0-9a-zA-Z]{3,}$#',$login)==1){
 
 			$pseudo = substr( $pseudo , 0, -1);
 			$mdp = substr( $mdp , 0, -1);
-			
-			if ($pass == $mdp) {
+			//var_dump(md5($pass));
+			if ($mdp == crypt($pass, "abcd")){
 				if ($pseudo == $login){
 					$exist=true;      //L'utilisateur est déjà inscrit dans le fichier "data.txt"
 				}
@@ -32,6 +31,7 @@ if (preg_match('#^[0-9a-zA-Z]{3,}$#',$login)==1){
 
 		if (! $exist) {   //Si l'utilisateur n'est pas encore inscrit
 			$login = $login."\n";
+			$pass=crypt($pass, "abcd");
 			$pass = $pass."\n";
 			fputs($data, $login);  //On inscrit son login
 			fputs($data, $pass);   //On inscrit son mot de passe

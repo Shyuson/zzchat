@@ -1,5 +1,4 @@
 <?php
-
 function dejaOnline( $pseudo ){
 	$resultat= false;
 	$fichier=fopen(__DIR__.'/../data/online.txt', 'r+');

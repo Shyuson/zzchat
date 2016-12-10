@@ -1,5 +1,6 @@
 <?php
-session_start();
+if(is_session_started()==false){
+session_start();}
 $_SESSION['langue']="eng";
 ?>
 

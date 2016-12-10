@@ -12,8 +12,7 @@ if((isset($login))&&(isset($pass))){
 		$mdp = fgets($data);
 		$pseudo = substr( $pseudo , 0, -1);
 		$mdp = substr( $mdp , 0, -1);
-		//var_dump(md5($pass));
-		if ($mdp == crypt($pass, "abcd")){
+		if (hash_equals($mdp, crypt($pass, $mdp))){
 			if ($pseudo == $login) {
 				if(! dejaOnline($login)){
 					$permision=true;

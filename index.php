@@ -1,8 +1,8 @@
 <?php
-session_start();
+if(!isset($_SESSION)){
+session_start();}
 $_SESSION['langue']="fr";
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -30,7 +30,7 @@ $_SESSION['langue']="fr";
 							<label for="name" class="cols-sm-2 control-label">Identifiant</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
-									<input type="text" class="form-control" name="pseudo" id="pseudo"  placeholder="Entrez votre identifiant"/>
+									<input type="text" class="form-control" name="pseudo" id="pseudo"  placeholder="Entrez votre identifiant" value = "<?php if(isset($_COOKIE['cookie'])){echo $_COOKIE['cookie'];}?>"/>
 								</div>
 							</div>
 						</div>
