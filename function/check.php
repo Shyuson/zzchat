@@ -3,44 +3,30 @@ include("online.php");
 $login = $_POST['pseudo'];   //On récupère ce que l'utilisateur a écrit dans la barre "pseudo"
 $pass = $_POST['password'];  //On récupère ce que l'utilisateur a écrit dans la barre "passmord"
 $permision = false;          //Par défaut, on n'autorise pas l'accès au site de chat
-$id_error = 0;
 
+if((isset($login))&&(isset($pass))){
+	$data = fopen(__DIR__.'/../data/data.txt', 'r+'); //Ouverture du fichier "data.txt", où sont stockés les logins et les mots de passe
 
-
-$data = fopen(__DIR__.'/../data/data.txt', 'r+'); //Ouverture du fichier "data.txt", où sont stochés les logins et les mots de passe
-
-
-while (! feof($data)) {
-	$pseudo = fgets($data);
-	$mdp = fgets($data);
-
-	$pseudo = substr( $pseudo , 0, -1);
-	$mdp = substr( $mdp , 0, -1);
-
-	if ($pass == $mdp) {
-		if ($pseudo == $login) {
-			if(! dejaOnline($login)){
-				$permision=true;
-				$PresentList = fopen(__DIR__.'/../data/online.txt', 'a+');
-				fputs($PresentList, $login.'<br>'."\n");
-
-				session_start();
-
-				$_SESSION['prenom'] = $login ;
-
+	while (! feof($data)) {
+		$pseudo = fgets($data);
+		$mdp = fgets($data);
+		$pseudo = substr( $pseudo , 0, -1);
+		$mdp = substr( $mdp , 0, -1);
+		if ($pass == $mdp) {
+			if ($pseudo == $login) {
+				if(! dejaOnline($login)){
+					$permision=true;
+					$PresentList = fopen(__DIR__.'/../data/online.txt', 'a+');
+					fputs($PresentList, $login.'<br>'."\n");
+					session_start();
+					$_SESSION['prenom'] = $login ;
+				}
 			}
-
 		}
 	}
-
+	fclose($data);
+	fclose($PresentList);
 }
-
-
-
-
-fclose($data);
-fclose($PresentList);
-
 
 if ($permision) {
 	if($_SESSION['langue']=="fr"){
@@ -53,8 +39,4 @@ if ($permision) {
 else {
 	header("Location: ../error.html");
 }
-
-
 ?>
-
-
