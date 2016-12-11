@@ -19,7 +19,7 @@ if (preg_match('#^[0-9a-zA-Z]{3,}$#',$login)==1){
 
 		$data = fopen(__DIR__.'/../data/data.txt', 'r+');
 
-
+		var_dump($data);
 		while (! feof($data)) {
 			# code...
 			$pseudo = fgets($data);
