@@ -26,10 +26,10 @@ if (preg_match('#^[0-9a-zA-Z]{3,}$#',$login)==1){
 			//var_dump(md5($pass));
 			if (CorrectPass($mdp ,$pass ,$pseudo ,$login)){
 					$exist=true;      //The user is registered already
-				}
 			}
-
 		}
+
+		
 
 
 		if (! $exist) {   //If the user is not registered yet
