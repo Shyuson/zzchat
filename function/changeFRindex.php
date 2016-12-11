@@ -1,6 +1,10 @@
-
 <?php
-session_start();
-$_SESSION['langue']="fr";
-header("Location: ../index.php");
+
+function changeFRindex(){
+	session_start();
+	$_SESSION['langue']="fr";
+	return "Location: ../index.php" ;
+}
+
+header(changeFRindex());
 ?>

@@ -1,5 +1,10 @@
 <?php
-session_start();
-$_SESSION['langue']="eng";
-header("Location: ../inscriptionENG.php");
+
+function changeENGinscript(){
+	session_start();
+	$_SESSION['langue']="eng";
+	return "Location: ../inscriptionENG.php"
+}
+
+header(changeENGinscript());
 ?>

@@ -13,3 +13,7 @@ bonjour><I>fezf</I><br>
 bonjour>efz<br>
 bonjour><strong>abcd</strong><br>
 bonjour><I>italique test</I><br>
+zhong>pourquoi<br>
+>aze<br>
+>azex<br>
+>pourquoi<br>
