@@ -8,3 +8,8 @@ david>je comprend pas<br>
 david2>je comprend pas non plus<br>
 zhong>je comprend pas<br>
 zhong>c'est nul c 'est lent<br>
+bonjour><strong>egtetatr</strong><br>
+bonjour><I>fezf</I><br>
+bonjour>efz<br>
+bonjour><strong>abcd</strong><br>
+bonjour><I>italique test</I><br>
