@@ -1,4 +1,5 @@
 <?php
-$_SESSION['langue']="fr";
-header("Location: ../index.php");
+include("function.php");
+
+header(changeFRindex());
 ?>

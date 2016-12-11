@@ -1,4 +1,5 @@
 <?php 
+include("function.php");
 $login = $_POST['pseudo'];
 $pass = $_POST['password'];
 $confim = $_POST['password2']; //Unused for now
@@ -14,14 +15,10 @@ if (preg_match('#^[0-9a-zA-Z]{3,}$#',$login)==1){
 		$data = fopen(__DIR__.'/../data/data.txt', 'r+');   //On ouvre le fichier contenant les logins et mdps
 
 		while (! feof($data)) {
-			$pseudo = fgets($data);
-			$mdp = fgets($data);
-
-			$pseudo = substr( $pseudo , 0, -1);
-			$mdp = substr( $mdp , 0, -1);
+			$pseudo = recupID($data);
+			$mdp = recupID($data);
 			//var_dump(md5($pass));
-			if ($mdp == crypt($pass, "abcd")){
-				if ($pseudo == $login){
+			if (CorrectPass($mdp ,$pass ,$pseudo ,$login)){
 					$exist=true;      //L'utilisateur est déjà inscrit dans le fichier "data.txt"
 				}
 			}
@@ -41,16 +38,6 @@ if (preg_match('#^[0-9a-zA-Z]{3,}$#',$login)==1){
 }
 
 
-if((!$exist) && (!$problemControl)) {    //Si l'utilisateur n'est pas encore inscrit et s'il n'a pas entré de caractères interdits
-	if ($_SESSION['langue']=="fr"){
-		header('Location: ../index.php'); //Renvoi vers la page de connexion
-	}
-	else{
-		header('Location: ../indexENG.php');
-	}
-}
-else{
-		header('Location: ../error.html');  //Sinon, renvoi vers la page d'erreur
-}
 
+header(direction2($exist, $problemControl));
 ?>
