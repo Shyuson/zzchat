@@ -1,4 +1,5 @@
 <?php
-$_SESSION['langue']="eng";
-header("Location: ../inscriptionENG.php");
+include("function.php");
+
+header(changeENGinscript());
 ?>
