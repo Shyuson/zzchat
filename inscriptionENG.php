@@ -1,3 +1,11 @@
+<!*********************************/
+/         InscriptionENG.php       /
+/**********************************/
+/This is the english register page /
+/It's the same as inscription.php  /
+/but written in English            /
+/**********************************/>
+
 <?php
 $_SESSION['langue']="eng";
 ?>
@@ -24,7 +32,6 @@ $_SESSION['langue']="eng";
 	            </div> 
 				<div class="main-login main-center">
 					<form class="form-horizontal" action="./function/inscriptest.php" method="post">
-						
 						<div class="form-group">
 							<label for="name" class="cols-sm-2 control-label">Login</label>
 							<div class="cols-sm-10">
@@ -49,7 +56,6 @@ $_SESSION['langue']="eng";
 								</div>
 							</div>
 						</div>
-
 						<div class="login-register">
 				            <input type="submit" id="submit" value="Register">
 				         </div>

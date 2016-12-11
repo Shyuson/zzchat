@@ -1,5 +1,12 @@
+<!/************************************************/
+/*                 inscription.php                */
+/**************************************************/
+/* This is the inscription page. It allows to     */
+/* register someone who is new to ZZchat.         */
+/**************************************************/>
+
 <?php
-$_SESSION['langue']="fr";
+$_SESSION['langue']="fr"; //Default language is French
 ?>
 
 
@@ -13,7 +20,7 @@ $_SESSION['langue']="fr";
 
 <body>
 	<a id="FR" href="./function/changeFRinscript.php"> <button type="button">FR</button> </a>
-  	<a id="ENG" href="./function/changeENGinscript.php"> <button type="button">ENG</button> </a>
+  	<a id="ENG" href="./function/changeENGinscript.php"> <button type="button">ENG</button> </a> <!Language buttons>
 		<div class="container">
 			<div class="row main">
 				<div class="panel-heading">
@@ -24,11 +31,14 @@ $_SESSION['langue']="fr";
 	            </div> 
 				<div class="main-login main-center">
 					<form class="form-horizontal" action="./function/inscriptest.php" method="post">
-						
+					<! inscriptest.php will get what the user put in the bars, with a POST method>
+	
 						<div class="form-group">
 							<label for="name" class="cols-sm-2 control-label">Identifiant</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
+
+									<! Login bar >
 									<input type="text" class="form-control" name="pseudo" id="pseudo"  placeholder="Choisissez un Identifiant"/>
 								</div>
 							</div>
@@ -37,6 +47,8 @@ $_SESSION['langue']="fr";
 							<label for="password" class="cols-sm-2 control-label">Mot de passe</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
+
+									<! Password bar >
 									<input type="password" class="form-control" name="password" id="password"  placeholder="Choisissez un mot de passe"/>
 								</div>
 							</div>
@@ -45,7 +57,9 @@ $_SESSION['langue']="fr";
 							<label for="password" class="cols-sm-2 control-label">Confirmation</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
-									<input type="password" class="form-control" name="password2" id="password2"  placeholder="Confirmer votre Mot de Passe"/>
+
+									<! Second password bar >
+									<input type="password" class="form-control" name="password2" id="password2"  placeholder="Confirmer votre Mot de Passe"/> 
 								</div>
 							</div>
 						</div>
@@ -57,7 +71,6 @@ $_SESSION['langue']="fr";
 			</div>
 		</div>
 		<script src="./librairie/jquery-3.1.1.js"> </script>
-
 	</body>
 </html>
 

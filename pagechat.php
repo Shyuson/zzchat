@@ -1,6 +1,9 @@
- <?php 
-var_dump($_SESSION['langue']);
- ?>
+<!**********************************************/
+/                pagechat.php                   /
+/***********************************************/
+/* This is the tchat page itself, where you    */
+/* can write messages and see who is connected */
+/***********************************************/>
 
 
 <!DOCTYPE html>
@@ -15,7 +18,7 @@ var_dump($_SESSION['langue']);
    <fieldset>
     <legend>Les utilisateurs actuellement connectés sont :</legend>
     <div id=onlineUser>
-
+	<! This section wil be filled by the javascript>
     </div>
     <br>
      
@@ -40,10 +43,12 @@ var_dump($_SESSION['langue']);
 
 
 
-    <script src="./librairie/jquery-3.1.1.js"></script>
-    <script src="./script/SendData.js" > </script>
-    <script src="./script/SendMessage.js"></script>
+    <script src="./librairie/jquery-3.1.1.js"></script> <! This line loads the jquery library>
+    <script src="./script/SendData.js" > </script> <! SendData.js loads the page at the beginning>
+    <script src="./script/SendMessage.js"></script> <! We use SendMessage.js to update the message area when someone sends a message>
     <script type="text/javascript">
+
+	/*This is to write in bold, or in italic*/
       function ChangeText(elementID, openTag, closeTag) {
         var textArea = $('#' + elementID);
         var len = textArea.val().length;

@@ -1,3 +1,12 @@
+<!*******************************/
+/*         online.php           */
+/********************************/
+/* This file verify if teh user */
+/* is online already, so that   */
+/* we don't have the same user  */
+/* online twice                 */
+/********************************/>
+
 <?php
 function dejaOnline( $pseudo ){
 	$resultat= false;
@@ -9,7 +18,7 @@ function dejaOnline( $pseudo ){
 			$resultat=true;
 		}
 	}
-	return $resultat; //On revoie true si on a bien trouvé l'utilisateur dans le fichier des utilisateurs actuellement connectés
+	return $resultat; //Returns true if the user is in the online.txt file
 }
 
 ?>

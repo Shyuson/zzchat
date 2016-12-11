@@ -1,12 +1,12 @@
 <?php 
 include("online.php");
 include("function.php");
-$login = $_POST['pseudo'];   //On récupère ce que l'utilisateur a écrit dans la barre "pseudo"
-$pass = $_POST['password'];  //On récupère ce que l'utilisateur a écrit dans la barre "passmord"
-$permision = false;          //Par défaut, on n'autorise pas l'accès au site de chat
+$login = $_POST['pseudo'];   //Gets the name written in the "pseudo" bar
+$pass = $_POST['password'];  //Gets the password written in the "password" bar
+$permision = false;          //By default, access to the tchat is denied
 
 if((isset($login))&&(isset($pass))){
-	$data = fopen(__DIR__.'/../data/data.txt', 'r+'); //Ouverture du fichier "data.txt", où sont stockés les logins et les mots de passe
+	$data = fopen(__DIR__.'/../data/data.txt', 'r+'); //Opens the data.txt file, where passwords and logins are stocked
 
 	while (! feof($data)) {
 
@@ -14,10 +14,6 @@ if((isset($login))&&(isset($pass))){
 		$pseudo=recupID($data);
 		$mdp=recupID($data);
 
-		//$pseudo = fgets($data);
-		//$mdp = fgets($data);
-		//$pseudo = substr( $pseudo , 0, -1);
-		//$mdp = substr( $mdp , 0, -1);
 		if (CorrectPass($mdp , $pass, $pseudo,$login)) {
 				if(! dejaOnline($login)){
 					$permision=true;

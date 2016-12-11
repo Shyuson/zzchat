@@ -1,6 +1,9 @@
-<?php
-var_dump($_SESSION['langue']);
- ?>
+<!********************************************/
+/*             pagechatENG.php               */
+/*********************************************/
+/* This is the english for the pagechat.php  */
+/* file.                                     */
+/*********************************************/>
 
 
 <!DOCTYPE html>
