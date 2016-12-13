@@ -1,0 +1,4 @@
+PHP Warning:  Unknown: open(/var/lib/php/session/sess_qe98i19jvb6s7v0bu86qft94t2, O_RDWR) failed: Permission denied (13) in Unknown on line 0
+PHP Parse error:  syntax error, unexpected '[' in phar:///home/etud/zhxu7/public_html/zzchat/PHPUnit/phpunit.phar/myclabs-deep-copy/DeepCopy/DeepCopy.php on line 22
+PHP Warning:  Unknown: open(/var/lib/php/session/sess_qe98i19jvb6s7v0bu86qft94t2, O_RDWR) failed: Permission denied (13) in Unknown on line 0
+PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/var/lib/php/session) in Unknown on line 0
